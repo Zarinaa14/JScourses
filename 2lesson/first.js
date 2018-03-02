@@ -16,24 +16,19 @@ function  Anogramma(a,b) {
 
                     console.log("Анограмма");
 				   return false;
-		            
-				
-			       }
-				    
-				   
-
-                 else {console.log(" не Анограмма");
-				  return false;
-			     }
-			  
-		  
-           }
-		  }	
+		            }
+				  else {console.log(" не Анограмма");
+				  return false; }
+			     
+			  }
+		   }	
         }
-		
-           else 
+		   else 
            console.log("не Анограмма "); 
 		   return false;
+           
+		
+         
 } 
 Anogramma(a,b);
  //arr1.join(a);
