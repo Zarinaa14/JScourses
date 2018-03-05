@@ -1,5 +1,5 @@
-var s = prompt("Enter numbers in such way:  s");
-var p = prompt("Enter numbers in such way:  p");
+var s = prompt("Enter :  s");
+var p = prompt("Enter :  p");
 function RandomArray( s, p){
     var min = s - p * s / 100;
 	var max = s + p * s / 100;
