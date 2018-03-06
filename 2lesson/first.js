@@ -5,30 +5,23 @@ function  Anogramma(a,b) {
           if    (a.length == b.length){
              var arr1 = a.split('');
 			 arr1.sort();
-//             console.log(arr1);
+            console.log(arr1);
              var arr2 = b.split('');
 			  arr2.sort();
-//             console.log(arr2);
-			 for( var i = 0; i < arr1.length; i++ ){
-                 for( var j = 0; j < arr2.length; j++ ){
+            console.log(arr2);
+			var str1 = arr1.join(",");
+            var str2 = arr2.join(",");
 
-                 if(arr1[i] == arr2[j]){
+                 if(str1==str2){
 
                     console.log("Анограмма");
 				   return false;
 		            }
 				  else {console.log(" не Анограмма");
 				  return false; }
-			     
-			  }
-		   }	
-        }
+		}	     
 		   else 
            console.log("не Анограмма "); 
 		   return false;
-           
-		
-         
-} 
+        } 
 Anogramma(a,b);
- //arr1.join(a);
