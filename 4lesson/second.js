@@ -1,6 +1,6 @@
 var height = 0;
 var attempt = 0;
-var intS = 0;
+var interval = 0;
 function scrollToEndPage() {
 console.log("hight:" + height + " scrollHeight:" + document.body.scrollHeight + " att:" + attempt  );
 
@@ -16,4 +16,4 @@ else
     clearInterval(intS);
 }
 }
-intS = setInterval(scrollToEndPage,100);
+interval = setInterval(scrollToEndPage,100);
