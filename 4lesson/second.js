@@ -13,7 +13,7 @@ if (height < document.body.scrollHeight)
 }
 else
 {
-    clearInterval(intS);
+    clearInterval(interval);
 }
 }
 interval = setInterval(scrollToEndPage,100);
