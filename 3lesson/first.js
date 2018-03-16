@@ -5,7 +5,8 @@ function RandomArray( s, p){
 	var max = s + p * s / 100;
 	var arr =[];
 	for(var i = 0; i < 1000; i++){
-		arr[i] = min + Math.random() * (max + 1 - min);
+		var chislo = (min + Math.random() * (max + 1 - min)).toFixed(0);
+		arr[i] = chislo;
  	}
 
 
