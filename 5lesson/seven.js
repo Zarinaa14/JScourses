@@ -1,55 +1,42 @@
-var mas = [ {
-   images : "dom1.jpg" ,
-dom:{ 
-  
-    adress : "Miroshnichenko 21",
-	floor :  3,
-	total_area : 320 ,
-	number_of_tenants : 10
-}},
-   {images : "dom2.jpg",
-dom:{   
-   
-    adress : "Solar 1",
-	floor :  2,
-	total_area : 220 ,
-	number_of_tenants : 4
-}},
-   {images : "dom3.jpg",
-dom:{ 
-    
-    adress : "Quiet 14",
-	floor :  1,
-	total_area : 120 ,
-	number_of_tenants : 2
-}},
- {images : "dom4.jpg",
-dom:{ 
-    
-    adress : "Yellow 14",
-	floor :  2,
-	total_area : 220 ,
-	number_of_tenants : 5
-}}
-];
+// Создать скрипт, который выводит в нижнем правом углу экрана каждые 2-3 секунды сообщение вида
+ // " из г. купил(а) штук товара ". Данные в сообщение вставляются из определенных заранее списков случайно. 
+//  Сообщения выстраиваются в столбик, сообщение пропадает через 10 секунд после появления.
+ var  num=Math.floor(Math.random() * 000 )+1950;
+var names = ["Roma", "Dasha", "Vika","Katya","Olya","Igor","Stepa","Misha","Lyba","Lyda","Nikita"];
+ var cities = ["Baranovichi", "Polotsk", "Novopolotsk", "Vitebsk", "Mogilev"];
+ var tovar = ["apple","cherry","strawberry","lemon","blueberry","melon","busderry","watermelon",];
+ var summa = [500,300,400,200,100,600,900,800,700];
 
+var divMain = document.getElementsByClassName("main")[0];
 
-var uh = document.getElementById("dom_list");
-var ul = document.getElementById("dom_list");
+function ticks(){
+	var spisoc = document.createElement("div");
+		spisoc.setAttribute("class", "spisoc");
 
-var str = "";
-for (var i = 0; i < mas.length; i++) { 
+	var h = {};
+		h.name = names[Math.floor(Math.random() * (names.length))];
+		h.city = cities[Math.floor(Math.random() * (cities.length))];
+		h.kol = Math.floor(Math.random() * 60);
+		h.tov = tovar[Math.floor(Math.random() * (tovar.length))];
+		h.sum = summa[Math.floor(Math.random() * (summa.length))];
 
-	str += "<li>"+"Adress: " + mas[i].dom.adress +"</li>" +"<li>"+ "Floor: "+ mas[i].dom.floor +"</li>"+"<li>"+"Total area: "+ mas[i].dom.total_area +"</li>"+"<li>"+"People: "+ mas[i].dom.number_of_tenants +"</li>"+  "<img src='" + mas[i].images + "'>" +"<li>"+"<hr/>";
+	var pokup_name = document.createElement("p");
+		pokup_name.setAttribute("id", "name");
+	var b1 = document.createElement("b");
+		b1.innerText ="Из " + h.city + " купил(а) " + h.name + " " + h.kol + " штук " + h.tov;
+		pokup_name.appendChild(b1);
 
+	spisoc.appendChild(pokup_name);
 
-uh.innerHTML = str;}
-for (var i = 0; i < uh.children.length; i+=2) {
-var add = uh.children[i];
-add.setAttribute("class" , "set");
-}
+	
 
-for (var i = 1; i < ul.children.length; i+=2) {
-var ads = ul.children[i];
-ads.setAttribute("class" , "setr");
-}
+ setTimeout(ticks, num);
+
+	divMain.appendChild(spisoc);
+
+	setTimeout(function(){
+		spisoc.remove();
+	},10000)
+
+};
+ticks();
