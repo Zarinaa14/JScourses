@@ -19,7 +19,7 @@ dom:{
 dom:{ 
     
     adress : "Quiet 14",
-	floor :  1,
+	floor :  2,
 	total_area : 120 ,
 	number_of_tenants : 2
 }},
