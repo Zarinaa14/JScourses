@@ -1,6 +1,3 @@
-// Составить массив объектов вида "Дом". У каждого дома есть адрес, этажность, изображение, 
-// общая площадь и кол-во жильцов. На базе массива объектов сгенерировать стилизованный список домов 
-// в HTML-коде, где будут фигурировать все данные о доме.
 var mas = [ {
    images : "images/dom1.jpg" ,
 dom:{ 
@@ -37,17 +34,25 @@ dom:{
 ];
 
 
+var uh = document.getElementById("dom_list");
 var ul = document.getElementById("dom_list");
+
 var str = "";
 for (var i = 0; i < mas.length; i++) { 
 
 	str += "<li>"+"Adress: " + mas[i].dom.adress +"</li>" +"<li>"+ "Floor: "+ mas[i].dom.floor +"</li>"+"<li>"+"Total area: "+ mas[i].dom.total_area +"</li>"+"<li>"+"People: "+ mas[i].dom.number_of_tenants +"</li>"+  "<img src='" + mas[i].images + "'>" +"<li>"+"<hr/>";
 
 
-ul.innerHTML = str;}
-for (var i = 0; i < ul.children.length; i+=2) {
-var add = ul.children[i];
+uh.innerHTML = str;}
+for (var i = 0; i < uh.children.length; i+=2) {
+var add = uh.children[i];
 add.setAttribute("class" , "set");
-}   
+}
 
+for (var i = 1; i < ul.children.length; i+=2) {
+var ads = ul.children[i];
+ads.setAttribute("class" , "setr");
+}
+
+   
 
