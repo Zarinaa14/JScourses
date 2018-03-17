@@ -13,7 +13,7 @@
         str += '<b>' + node.nodeName.toLowerCase() + '</b>';
 
         if (node.id) {
-            str += '[#' + node.id + ']';
+            str += '{#' + node.id + '}';
         }
 
         if (node.className) {
