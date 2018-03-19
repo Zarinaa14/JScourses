@@ -10,14 +10,14 @@ for (i=0; i<max; i++) {
 		 tds[k].addEventListener("mouseout",stop)}
 		 
 		for(var k = 0; k < tds.length; k++) {
-		 var set = function (){
+		 var red = function (){
 		 this.style.backgroundColor ="red";}
 		 var stop = function (){
 		 this.style.backgroundColor ="#fff";}
       
 		 
 
-		 tds[k].addEventListener("mouseover",set);
+		 tds[k].addEventListener("mouseover",red);
 		 
 		 
 		
