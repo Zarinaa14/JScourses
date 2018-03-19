@@ -7,10 +7,11 @@ for (i=0; i<max; i++) {
         document.write('<td>' +''+'</td>');
 		var tds = document.getElementsByTagName("td");
 		function express(){
-		 tds[k].addEventListener("mouseout",express)}
+		 tds[k].addEventListener("mouseout",stop)}
+		 
 		for(var k = 0; k < tds.length; k++) {
 		 var set = function (){
-		 this.style.backgroundColor ="blue";}
+		 this.style.backgroundColor ="red";}
 		 var stop = function (){
 		 this.style.backgroundColor ="#fff";}
       
