@@ -1,45 +1,46 @@
-var array = [{ 
-name : "Sergey", 
-human: { 
-adress : "Mir 21", 
-work: "economist" , 
-experience : 8, 
-hobby: "fishing" 
-} 
-}, 
-{ 
-name : "Vika", 
-human: { 
-adress : "Mirir 21", 
-work: "decorator" , 
-experience : 3, 
-hobby: "drawing" 
-} 
+var array = [{
+    name :  "Sergey",
+    human: {
+      adress : "Mir 21",
+      work: "economist" ,
+	  experience : 8,
+	  hobby: "fishing"
+    }
+  },
+  {
+     name :  "Vika",
+	 human: {
+      adress : "Mirir 21",
+      work: "decorator" ,
+	  experience : 3,
+	  hobby: "drawing"
+    }
+     
+    },
+	 {
+     name :  "Victor",
+	 human: {
+      adress : "Mirir 21",
+      work: "teacher" ,
+	  experience : 5,
+	  hobby: "hunting"
+    }
+     
+    },
+	 {
+     name :  "Darya",
+	 human: {
+	  
+      adress : "Mirir 21",
+      work: "instructor" ,
+	  experience : 2,
+	  hobby: "dancing"   //hunting
+    }
+     
+    }
+  
+];
 
-}, 
-{ 
-name : "Victor", 
-human: { 
-adress : "Mirir 21", 
-work: "teacher" , 
-experience : 5, 
-hobby: "hunting" 
-} 
-
-}, 
-{ 
-name : "Darya", 
-human: { 
-
-adress : "Mirir 21", 
-work: "instructor" , 
-experience : 2, 
-hobby: "dancing" //hunting 
-} 
-
-} 
-
-]; 
 
 var arr= array.length; 
 var table = document.createElement('table'); 
