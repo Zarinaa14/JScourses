@@ -53,7 +53,7 @@ var work = array[i].human.work;
 var hobby = array[i].human.hobby; 
 var experience = array[i].human.experience; 
 var name = array[i].name; 
-document.write('<tr className="mess-hide"><td className="adress"><h4>' + adress + '</h4></td><td className="work"><h4>' + work + '</h4></td><td className="exp"><h4>' + experience + '</h4></td><td className="adress"><h4>' + hobby + '</h4></td></tr>'); 
+document.write('<tr className="mess-hide"><td className="adress"><h4>' + adress + '</h4></td><td className="work"><h4>' + work + '</h4></td><td className="exp"><h4>' + experience + '</h4></td><td className="adress"><h4>' + hobby + '</h4><button>кнопка</button></td></tr>'); 
 } 
 
 var tds = document.getElementsByTagName("td"); 
