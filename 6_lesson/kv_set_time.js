@@ -11,24 +11,12 @@ for(var k = 0; k < tds.length; k++) {
 tds[k].addEventListener("mouseover",set); 
 var set = function (){ 
 this.style.backgroundColor ="red"; 
+(function (t) {
+	setTimeout( function(){ t.style.backgroundColor="white"; } ,3000);
+})(this)
 } 
 }
-for( k = 0; k < tds.length; k++) {
-tds[k].addEventListener("mouseout",function (){ 
-
-setTimeout(stop,3000); }) ; 
-
-
-function stop(){ 
-for(var s = 0; s < tds.length; s++){ 
-if(tds[s].style.backgroundColor ="red"){ 
-tds[s].style.backgroundColor ="#fff";} 
-} 
-} 
-} 
 } 
 document.write('</tr>'); 
 } 
 document.write('</table>'); 
-
-
