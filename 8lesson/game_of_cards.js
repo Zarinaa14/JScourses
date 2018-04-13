@@ -7,17 +7,17 @@ var tries = 0;
 
 
 var Interval ;
-var images = ['1', '2', '3', '4', '5', '6', '7', '8'];
+var images = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'];
 
 var clone = images.slice(0);
 var cards = images.concat(clone);
 
 
-function shuffle(o){
+function random_cards(o){
   for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i],   o[i] = o[j], o[j] = x);
   return o;
 }
-shuffle(cards);
+random_cards(cards);
 
 for (var i = 0; i < cards.length; i++) {
   card = document.createElement('div');
