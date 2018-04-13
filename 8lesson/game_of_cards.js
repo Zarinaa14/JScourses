@@ -4,18 +4,20 @@ var counter = 0;
 var text = document.getElementById('text');
 
 var tries = 0;
-var appendTens = document.getElementById("tens");
 
+
+var Interval ;
 var images = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'];
+
 var clone = images.slice(0);
 var cards = images.concat(clone);
 
 
-function random_cards(o){
+function shuffle(o){
   for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i],   o[i] = o[j], o[j] = x);
   return o;
 }
-random_cards(cards);
+shuffle(cards);
 
 for (var i = 0; i < cards.length; i++) {
   card = document.createElement('div');
@@ -37,6 +39,9 @@ for (var i = 0; i < cards.length; i++) {
       if (resultsArray[0] === resultsArray[1]) {
         check("correct");
         counter ++;
+		console.log(counter);
+		
+//        win();
 if(counter==12){alert("Ты молодец, наконец-то ты прошел игру!!!");}
 if(counter==1){alert("Ты нашел первую пару картинок! Продолжай");}
         resultsArray = [];
