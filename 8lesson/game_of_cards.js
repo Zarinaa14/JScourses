@@ -44,7 +44,7 @@ for (var i = 0; i < cards.length; i++) {
         counter ++;
 		console.log(counter);
 if(counter==12){alert("Ты молодец, наконец-то ты прошел игру!!!");}
-if(counter==1){alert("Ты молодец, наконец-то ты прошел игру!!!");}
+if(counter==1){alert("Ты молодец ты угадал первую пару картинок!!!");}
 alert("угадал");
         resultsArray = [];
       } else {
