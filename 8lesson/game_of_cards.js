@@ -7,7 +7,7 @@ var tries = 0;
 
 
 var Interval ;
-var images = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'];
+var images = ['1', '2', '3', '4', '5', '6', '7', '8'];
 
 var clone = images.slice(0);
 var cards = images.concat(clone);
