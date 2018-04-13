@@ -1,0 +1,149 @@
+
+
+body {
+  background: #ffdead;
+  font-family: 'Tinos', serif;
+  font-size: 1.5em;
+  text-align: center;
+  color: #000000;
+}
+
+h1 {
+  font-weight: 200;
+  font-size: 2.2em;
+}
+
+
+div {
+  width:445px;
+  margin: auto;
+}
+
+.six {
+  width: 445px;
+  margin: auto;
+  align: center;
+}
+
+.eight {
+  width: 600px;
+  margin: auto;
+  align: center;
+}
+
+.ten {
+  width: 800px;
+  margin: auto;
+  align: center;
+}
+
+
+
+[data-view="card"] {
+  transform: rotateY(180deg);
+  width: 72px;
+  height: 72px;
+  margin: 1px;
+  float: left;
+  cursor: pointer;
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+
+.flipped {
+  transition: 0.2s;
+  transform-style: preserve-3d;
+  position: relative;
+  transform: rotateY(0deg);
+}
+
+.reverse {
+  transition: 0.2s;
+  transform-style: preserve-3d;
+  position: relative;
+  transform: rotateY(180deg);
+}
+
+.correct {
+  transition: 0.8s;
+  opacity: 0.2;
+  cursor: default;
+  transform-style: preserve-3d;
+  position: relative;
+  transform: translateX(-5000%);
+}
+
+/* Cards */
+.correct[data-item="1"],
+.flipped[data-item="1"] {
+  background: url("img/image1.gif") left center no-repeat;
+  background-size: contain;
+}
+
+.correct[data-item="2"],
+.flipped[data-item="2"] {
+  background: url("img/image2.gif") left center no-repeat;
+  background-size: contain;
+}
+
+.correct[data-item="3"],
+.flipped[data-item="3"] {
+  background: url("img/image3.gif") left center no-repeat;
+  background-size: contain;
+}
+
+.correct[data-item="4"],
+.flipped[data-item="4"] {
+  background: url("img/image4.gif") left center no-repeat;
+  background-size: contain;
+}
+
+.correct[data-item="5"],
+.flipped[data-item="5"] {
+  background: url("img/image5.gif") left center no-repeat;
+  background-size: contain;
+}
+
+.correct[data-item="6"],
+.flipped[data-item="6"] {
+  background: url("img/image6.gif") left center no-repeat;
+  background-size: contain;
+}
+
+.correct[data-item="7"],
+.flipped[data-item="7"] {
+  background: url("img/image7.gif") left center no-repeat;
+  background-size: contain;
+}
+
+.correct[data-item="8"],
+.flipped[data-item="8"] {
+  background: url("img/image8.gif") left center no-repeat;
+  background-size: contain;
+}
+
+.correct[data-item="9"],
+.flipped[data-item="9"] {
+  background: url("img/image9.gif") left center no-repeat;
+  background-size: contain;
+}
+
+.correct[data-item="10"],
+.flipped[data-item="10"] {
+  background: url("img/image10.gif") left center no-repeat;
+  background-size: contain;
+}
+
+.correct[data-item="11"],
+.flipped[data-item="11"] {
+  background: url("img/image11.gif") left center no-repeat;
+  background-size: contain;
+}
+
+.correct[data-item="12"],
+.flipped[data-item="12"] {
+  background: url("img/image12.gif") left center no-repeat;
+  background-size: contain;
+}
+
+
