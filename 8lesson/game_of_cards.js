@@ -1,10 +1,13 @@
- var myCards = document.getElementById('container');
+var myCards = document.getElementById('container');
 var resultsArray = [];
 var counter = 0;
 var text = document.getElementById('text');
-
+var seconds = 00;
+var tens = 00;
 var tries = 0;
-
+var appendTens = document.getElementById("tens");
+var appendSeconds = document.getElementById("seconds");
+var buttonPause = document.getElementById('button-pause');
 
 var Interval ;
 var images = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'];
@@ -13,11 +16,11 @@ var clone = images.slice(0);
 var cards = images.concat(clone);
 
 
-function random_cards(o){
+function shuffle(o){
   for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i],   o[i] = o[j], o[j] = x);
   return o;
 }
-random_cards(cards);
+shuffle(cards);
 
 for (var i = 0; i < cards.length; i++) {
   card = document.createElement('div');
@@ -40,10 +43,9 @@ for (var i = 0; i < cards.length; i++) {
         check("correct");
         counter ++;
 		console.log(counter);
-		
-//        win();
 if(counter==12){alert("Ты молодец, наконец-то ты прошел игру!!!");}
-if(counter==1){alert("Ты нашел первую пару картинок! Продолжай");}
+if(counter==1){alert("Ты молодец, наконец-то ты прошел игру!!!");}
+alert("угадал");
         resultsArray = [];
       } else {
         check("reverse");
@@ -66,8 +68,7 @@ window.onload = function () {
         var target = e.target || e.srcElement;
         if (target.className != 'flipped') return;
         tries++;
-		if(tries==30)alert("Больше запоминай!");
-		if(tries==50)alert("Меньше кликай,больше запоминай");
+		if(tries==40){alert("Больше запоминай картинок!");}
         span.innerHTML = Math.floor(tries / 2);
     })
 }
