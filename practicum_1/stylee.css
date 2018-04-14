@@ -1,0 +1,88 @@
+body{
+    background: #B0E0E6;
+    background-attachment: fixed;
+    background-size: 100%;
+ 
+}
+
+img{
+    cursor: pointer;
+	
+}
+h1{
+    font-weight: normal;
+    font-family: 'Merriweather', serif;
+    position: relative;
+    display: inline-block;
+    margin: 5px;
+
+    line-height: 1;
+    color: #043300;
+    font-size: 40px;
+    padding: .4em 1em .30em;
+}
+h1:before,
+h1:after {
+  content: ""; 
+  position: absolute;
+  width: 60%;
+  height: .1em;
+  background: #294200; 
+}
+h1:before {
+  left: 0;
+  top: 0;
+}
+h1:after {
+  right: 0;
+  bottom: 0;
+}
+
+.image{
+    margin: 15px;
+    width: 70%;
+}
+
+.inp {
+    padding: 3px;
+    font-size: 15px;
+    border: 3px solid rgba(65 105 225);
+    -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset, 0 2px 10px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset, 0 2px 10px rgba(0, 0, 0, 0.25);
+    -moz-border-radius: 10px;
+    border-radius: 8px;
+    background: rgb(173 216 230); 
+	color: hsla(120, 100%, 50%, 0.5);  
+   
+    outline: none;
+    color: #000000;
+    width:100px;
+    margin: 5px;
+  }
+
+
+input[type="radio"] {
+	cursor: pointer;
+}
+#vid_upakovki{
+  
+    padding: 20px;
+    border: 1px solid #4169E1	;
+    width:35%;
+    border-radius: 50px
+  }
+
+#discount {
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #4169E1	;
+    width:35%;
+    border-radius: 50px
+  }
+ 
+ 
+
+.open{
+	background-color:efefef;
+	 
+}
