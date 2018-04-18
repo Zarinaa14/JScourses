@@ -26,7 +26,10 @@ for(var i = 0; i < obj.length; i++){
 	Element.innerHTML = "<p>" + obj[i].title + "</p>"; 
 	ContextMenu.appendChild(Element);
 }
+ContextMenu.addEventListener("click", function(e){
+	
 
+})
     Menu.addEventListener("contextmenu", function(e){
 	e.preventDefault();
 	ContextMenu.style.position = "absolute";

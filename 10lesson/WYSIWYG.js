@@ -133,4 +133,4 @@ ContextMenu.addEventListener("click", function(e){
 })
 
 
-},50)
+},10)
