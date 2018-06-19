@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+<link rel ="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyADc1Nji6DvjVkU3vfa2n0AaaEkNOK2pLY"
+  type="text/javascript"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-auth.js"></script>
+   <script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyA48GDt_hk0KqU0otke2IRK-X9uIgKYehw",
+    authDomain: "lesson-20-1529244764698.firebaseapp.com",
+    databaseURL: "https://lesson-20-1529244764698.firebaseio.com",
+    projectId: "lesson-20-1529244764698",
+    storageBucket: "lesson-20-1529244764698.appspot.com",
+    messagingSenderId: "104285901222"
+  };
+  firebase.initializeApp(config);
+    </script>
+
+	
+</head>
+
+ <body>
+  <div id="userData"><span id="userName"></span><button id="exit">Выход</button></div>
+
+ <form id="login" >
+  <label>
+  <span>Email: <span>
+  <input type="email" id="1-email"/>
+  </label>
+  <label>
+  <span>Password: <span>
+  <input id="1-password"/>
+  </label>
+  <button type="submit">Login </button>
+</form>
+
+ <div id="map">
+ <div>В жизни мы не раз слышали&nbsp;&nbsp;о&nbsp;&nbsp;некоторых,&nbsp;завораживащих&nbsp;нас, сооружениях&nbsp;по всему свету. Математика и архитектура тесно связаны и мы расскажем&nbsp;вам об этом: читайте дальше данную статью и вы узнаете много интересных фактов о<em>б </em>пирамиде в Египте.</div>
+
+<div>&nbsp;</div>
+
+<div style="text-align: center;"><em>Великая Пирамида Гизы, Каир, Египет</em></div>
+
+<div style="text-align: justify;">&nbsp;</div>
+
+<div style="text-align: justify;">Превосходство, описывающее Великую пирамиду Гизы, говорит само за себя: самая большая и древняя из трех пирамид, ее называют пирамидой&nbsp;Хеопса.&nbsp;Пирамида&nbsp;является&nbsp;самой высокой рукотворной структурой в мире&nbsp;и является&nbsp;одним из семи чудес&nbsp;света Древнего мира. Она стоит уже&nbsp;<span class="math-tex">\(3800\)</span>&nbsp;лет и неизвестно сколько еще будет удивлять нас своей необычной архитекурой.</div>
+
+<div>&nbsp;</div>
+
+
+
+<div>&nbsp;</div>
+
+<div>
+<div style="text-align: justify;">Построенная между 2589 и 2504 годами до н. э., хотя предполагаемые даты несколько различаются, Великая Пирамида Гизы, как полагают, была спроектирована как могила египетского фараона Хуфу, также известного как Хеопс, поэтому ее еще называют пирамидой Хуфу. Считается, что его дизайнером был&nbsp;визирь Хемон; визирь был самым высоким чиновником на земле и отвечал за обеспечение надлежащего строительства памятника. До завершения строительства шпиля Линкольнского собора Великая Пирамида была самым высоким искусственным сооружением в мире.</div>
+
+<div style="text-align: justify;">&nbsp;</div>
+
+<div style="text-align: justify;">Со временем размеры этого монументального сооружения несколько уменьшились из-за отсутствия защитных камней, а также из-за таких факторов окружающей среды, как землетрясения. На момент строительства большая Пирамида, по оценкам, имела следующие размеры и характеристики:</div>
+
+<div>&nbsp;</div>
+
+<ul>
+	<li>первоночальная высота около 146,5 метра, уменшилась с течением времени и стала 138,7  м;</li>
+	<li>каждая сторона около: 230 метра;</li>
+	<li>площадь основания примерно 55.000 квадратных метров;</li>
+	<li>количество блоков из которых состоит пирамида: 2,3 миллиона, по оценкам, каждый блок весит&nbsp;от <span class="math-tex">2,5</span> до <span class="math-tex">20</span> тонн;</li>
+	<li>вес пирамиды примерно 5,9миллионов тонн.</li>
+</ul>
+</div>
+</div>
+
+<div>&nbsp;</div>
+<div id="sh">Если вы не зарегестрированы, зарегестрируйтесь: </div>
+<div>&nbsp;</div>
+<form id="register" >
+  <label>
+  <span>Email: <span>
+  <input type="email" id="email"/>
+  </label>
+  <label>
+  <span>Password: <span>
+  <input id="password"/>
+  </label>
+  <button type="submit">Register </button>
+</form>
+
+
+   <script type="text/javascript" src="s.js"></script>
+ </body>
+</html>

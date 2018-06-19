@@ -1,0 +1,25 @@
+#map{
+     width: 500px;
+	 height: 500px;
+ 
+}
+input { width: 100px; font-size: 13px; padding: 6px 0 4px 10px; border: 1px solid #cecece; background: #F6F6f6; border-radius: 8px; 
+} input:focus {
+  border: 2px solid green;  
+}
+button {
+  width: 100px;
+  height: 30px;
+  text-decoration: none;
+              
+  background:#bcc4e6;
+  border-radius: 15px 15px 15px 15px;
+  color: green;
+  line-height: 20px;
+  font: normal 17px arial;
+}	
+button:hover{ background:#919cc7;}
+#sh{
+	font-family: century gothic;
+	
+}
