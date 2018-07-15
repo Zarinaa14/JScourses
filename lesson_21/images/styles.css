@@ -1,0 +1,80 @@
+@charset "utf-8";
+/* CSS Document */
+
+html, body {
+	margin:0;
+	padding:0;
+	position:relative;
+	height:100%;
+	min-width:980px;
+	font:normal 12px Arial, Helvetica, sans-serif;
+	color:#888;
+	background: #ffffff;
+    }
+.site-wrap {
+	height:auto !important;
+	height:100%;
+	min-height:100%;
+	width:980px;
+	margin:0 auto -30px;
+	background:#eee;
+    }
+header {
+	height:30px;
+	background:#000;
+	position:relative;
+    }
+footer{
+    height:30px;
+    width:980px;
+    margin:0 auto;
+    background:#000;
+    }
+
+/* for gallery*/
+.gallery-box{
+  width:600px;
+  padding:25px 0 0;
+  margin:0 auto;
+}
+.view{
+  position:relative;
+  margin:0 0 5px;
+}
+.big-image img{
+  display:block;
+  width:600px;
+  height:300px;
+}
+.prev, .next{
+  position:absolute;  
+  width:40px;
+  height:40px;
+}
+.prev{
+  bottom:20px;
+  left:20px;
+  background:url(../images/controls.png) no-repeat 0 0;
+}
+.next{
+  bottom:20px;
+  right:20px;
+  background:url(../images/controls.png) no-repeat -48px 0;
+}
+ 
+.thumbnails{
+  width:605px;
+}
+.thumbnails a{
+  float:left;
+  margin:0 5px 0 0;
+}
+.thumbnails a img{
+  width:142px;
+  height:80px;
+  border: 2px solid transparent;
+  display:block;
+}
+.thumbnails .active img{
+  border-color:#069;
+}
