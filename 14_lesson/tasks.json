@@ -1,0 +1,34 @@
+{
+	"tasks": [
+		{
+			"name": "name1",
+			"prio": "1",
+			"date_end": "today"
+		},
+		{
+			"name": "name2",
+			"prio": "2",
+			"date_end": "today"
+		},
+		{
+			"name": "name3",
+			"prio": "2",
+			"date_end": ""
+		},
+		{
+			"name": "name4",
+			"prio": "2",
+			"date_end": ""
+		},
+		{
+			"name": "name5",
+			"prio": "2",
+			"date_end": "tomorrow"
+		},
+		{
+			"name": "name6",
+			"prio": "2",
+			"date_end": "tomorrow"
+		}
+	]
+}
