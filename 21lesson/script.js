@@ -1,119 +1,73 @@
-  // $.get('images/index.json', function(data, status) {
-  //   console.log('1111111112222222222')
-  // }, 'application/json');
-
-$.get('index1.json', function(data, status) {
-  $.parseJSON(data).forEach(function(imageObj, index) {
-    var link = $('<a>',{
-        title: imageObj.title,
-        // href: index
-    }).appendTo('.thumbnails');
-
-    var imgEl = $('<img>', {
-      src: imageObj.image
-    }).appendTo(link);
-  })
-
-   $('.thumbnails a').click(function(event){
-     event.preventDefault();                           
-     var images = $(this).find('img');   //
-     var imgSrc = images.attr('src');
-     $(".big-image img").attr({ src: imgSrc });                         
-     $(this).siblings('a').removeClass('active');                       
-     images.parent().addClass('active');                                
-     return false;
-   });
+$(document).ready(function() {
+  $.ajax({
+    // dataType: 'application/json',
+    url: 'images.json',
+    type: 'GET',
+    success: function(data){
+      if (typeof data === 'string' || data instanceof String) {
+        data = $.parseJSON(data);
+      }
+      data.forEach(function(imageObj) {
+        var link = $('<a>',{
+            title: imageObj.title,
+        }).appendTo('.thumbnails');
   
-   $('.next').click(function(){                                         
-     var count = $('.thumbnails a').length;                             
-     var n = parseInt($('.thumbnails a').index($('.active')) + 1);      
-     var activeImg = $('.thumbnails .active');                          
-     var nextSrc;
-  
-     if (count != n){                                                   
-       nextSrc = activeImg.next().find('img').attr('src');              
-       $('.thumbnails .active').removeClass('active');                  
-       activeImg.next().addClass('active');                             
-     }else{                                                             
-       nextSrc = $('.thumbnails a').first().find('img').attr('src');    
-       $('.thumbnails .active').removeClass('active');                  
-       $('.thumbnails a').first().addClass('active');                   
-     }
-     $('.big-image img').attr({ src: nextSrc });                        
-     return false;
-   });
-  
-  
-   $('.prev').click(function(){                                         
-     var count = $('.thumbnails a').length;                             
-     var n = parseInt($('.thumbnails a').index($('.active')) + 1);      
-     var activeImg = $('.thumbnails .active');                          
-     var prevSrc;
-  
-     if (n != 1){                                                       
-       prevSrc = activeImg.prev().find('img').attr('src');                    
-       $('.thumbnails .active').removeClass('active');                  
-       activeImg.prev().addClass('active');                             
-     }else{                                                             
-       prevSrc = $('.thumbnails a:last').find('img').attr('src');       
-       $('.thumbnails .active').removeClass('active');                  
-       $('.thumbnails a:last').addClass('active');                      
-     }
-     $('.big-image img').attr({ src: prevSrc });                        
-     return false;
-   });
-
-}, 'application/json');
+        $('<img>', {
+          src: imageObj.image
+        }).appendTo(link);
+      });
+      $('.thumbnails a:first').addClass('active');
+    },
+    error: function(data) {
+        alert('woops!');
+    }
+  });
+});
 
 
-// $(function(){	
-//   $('.thumbnails a').click(function(event){
-//  debugger
-//     event.preventDefault();                           
-//     var images = $(this).find('img');   //
-//     var imgSrc = images.attr('src');
-//     $(".big-image img").attr({ src: imgSrc });                         
-//     $(this).siblings('a').removeClass('active');                       
-//     images.parent().addClass('active');                                
-//     return false;
-//   });
- 
-//   $('.next').click(function(){                                         
-//     var count = $('.thumbnails a').length;                             
-//     var n = parseInt($('.thumbnails a').index($('.active')) + 1);      
-//     var activeImg = $('.thumbnails .active');                          
-//     var nextSrc;
- 
-//     if (count != n){                                                   
-//       nextSrc = activeImg.next().find('img').attr('src');              
-//       $('.thumbnails .active').removeClass('active');                  
-//       activeImg.next().addClass('active');                             
-//     }else{                                                             
-//       nextSrc = $('.thumbnails a').first().find('img').attr('src');    
-//       $('.thumbnails .active').removeClass('active');                  
-//       $('.thumbnails a').first().addClass('active');                   
-//     }
-//     $('.big-image img').attr({ src: nextSrc });                        
-//     return false;
-//   });
- 
- 
-//   $('.prev').click(function(){                                         
-//     var count = $('.thumbnails a').length;                             
-//     var n = parseInt($('.thumbnails a').index($('.active')) + 1);      
-//     var activeImg = $('.thumbnails .active');                          
-//     var prevSrc;
- 
-//     if (n != 1){                                                       
-//       prevSrc = activeImg.prev().find('img').attr('src');                    
-//       $('.thumbnails .active').removeClass('active');                  
-//       activeImg.prev().addClass('active');                             
-//     }else{                                                             
-//       prevSrc = $('.thumbnails a:last').find('img').attr('src');       
-//       $('.thumbnails .active').removeClass('active');                  
-//       $('.thumbnails a:last').addClass('active');                      
-//     }
-//     $('.big-image img').attr({ src: prevSrc });                        
-//     return false;
-//   });
-// })
+$(function(){
+  $('body').on('click', 'img', function(event) {
+    if (event.target.tagName.toLowerCase() !== 'img') {
+      return;
+    }
+
+    let $currentImg = $(event.target);
+    $(".big-image img").attr({ src: $currentImg[0].src });
+    $currentImg.parent().siblings('a').removeClass('active');
+    $currentImg.parent().addClass('active');
+  });
+
+  $('.next').on('click', function() {                        
+    let $activeEl = $('.thumbnails .active');
+    $activeEl.removeClass('active');
+
+    let $nextEl = $activeEl.next();
+    let $firstEl = $('.thumbnails a:first');
+
+    if ($nextEl.length) {
+      $nextEl.addClass('active');
+      $('.big-image img').attr({ src: $nextEl.children()[0].src });
+    } else {
+      $firstEl.addClass('active');
+      $('.big-image img').attr({ src: $firstEl.children()[0].src }); 
+    }
+  });
+
+
+  $('.prev').on('click', function() {
+    let $activeEl = $('.thumbnails .active');
+    $activeEl.removeClass('active');
+
+    let $prevEl = $activeEl.prev();
+    let $lastEl = $('.thumbnails a:last');
+
+    if ($prevEl.length) {
+      $prevEl.addClass('active');
+      $('.big-image img').attr({ src: $prevEl.children()[0].src });
+    } else {
+      $lastEl.addClass('active');
+      $('.big-image img').attr({ src: $lastEl.children()[0].src }); 
+    }
+  });
+                                            
+});
