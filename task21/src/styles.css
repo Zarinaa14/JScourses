@@ -1,0 +1,107 @@
+.App {
+  font-family: sans-serif;
+  font-size: 19px;
+}
+
+.pizzaOrderList {
+  float: contour;
+}
+
+button {
+  font-size: inherit;
+  background: #ccc;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+
+.pay-btn {
+  margin: 2px;
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 10px;
+  width: 60px;
+  height: 30px;
+  color: black;
+}
+
+.pay-btn:hover {
+  background-color: #008cba;
+  color: white;
+}
+
+.paid-btn {
+  width: 60px;
+  height: 30px;
+  margin: 3px;
+  background-color: grey;
+  border-radius: 15px;
+  color: black;
+  border: 1px solid #83898b;
+}
+
+.paid-btn:hover {
+  /*cursor: not-allowed;*/
+  background-color: #8f8e8e;
+  color: white;
+}
+
+table {
+  border-collapse: collapse;
+  width: 300px;
+  table-layout: fixed;
+}
+
+tbody:hover {
+  background-color: #f1f1f1;
+}
+
+thead {
+  background-color: #f1f1f1;
+}
+
+table,
+th,
+tr,
+thead,
+tbody,
+td {
+  border: 2px solid black;
+  padding: 0;
+  height: 30px;
+  margin: 0;
+  vertical-align: center;
+  text-align: center;
+}
+
+.vegan {
+  color: green;
+}
+.pizza {
+  float: left;
+  margin: 20px;
+  width: 350px;
+  height: 350px;
+  border: 3px solid black;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+}
+
+.item {
+  position: absolute;
+  transform-origin: 100% 100%;
+  background: forestgreen;
+  width: 5000px;
+  height: 5000px;
+  left: 50%;
+  top: 50%;
+  border: 1px solid wheat;
+  margin-top: -5000px;
+  margin-left: -5000px;
+}
+
+.item:hover {
+  background-color:grey;
+}
+
