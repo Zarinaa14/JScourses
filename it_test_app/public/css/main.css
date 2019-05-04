@@ -1,0 +1,40 @@
+.login-btn-wrapper {
+  margin-left: 50px;
+}
+
+.preorder-row {
+  padding: 40px 0 40px 0;
+}
+
+.preorder-row-text {
+  font-size: 35px;
+}
+
+.preorder-row-btn {
+  font-size: 17px;
+}
+
+.farm-info-text-wrapper {
+  width: 50%;
+}
+
+.main-video-highlights {
+  padding-top: 20px;
+}
+
+.video-highlight-big {
+  height: 400px;
+}
+
+.video-highlight-small {
+  height: 200px;
+}
+
+.farms-map-wrapper {
+  padding-top: 20px;
+}
+
+.info-block {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
