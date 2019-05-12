@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<div id="app"></div>
+<script type="text/javascript" src="app.js"></script>
+<link rel="stylesheet" href="style.css">
+<script>
+
+
+    const app = Elm.Main.init({
+        node: document.getElementById('app'),
+    });
+
+    app.ports.resp.subscribe((data) => {
+        const feedback = data;
+        const feedbacks = JSON.parse(localStorage.getItem('feedbacks'));
+        if (feedbacks) {
+            localStorage.setItem('feedbacks', JSON.stringify( [...feedbacks, feedback]));
+        } else {
+            localStorage.setItem('feedbacks', JSON.stringify([feedback]));
+        }
+        sendFeedback()
+    });
+
+    function sendFeedback() {
+        const data = localStorage.getItem('feedbacks');
+        var feedbacks =[];
+        if (data)
+            feedbacks = JSON.parse(data);
+
+        app.ports.req.send({ feedbacks: feedbacks })
+    }
+
+</script>
+</body>
+</html>
