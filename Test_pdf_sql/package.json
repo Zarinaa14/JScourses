@@ -4,7 +4,7 @@
   "description": "newpackage",
   "main": "server.js",
   "dependencies": {
-    "mysql": "^2.13.0",
+    "mysql": "^2.14.0",
     "pdfkit": "^0.8.2"
   },
   "devDependencies": {},
